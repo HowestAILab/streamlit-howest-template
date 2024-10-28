@@ -19,18 +19,6 @@ args = parser.parse_args()
 # ===================================================================
 
 
-# Fix current working directory
-cwd = os.path.basename(os.getcwd())
-if cwd != ".streamlit":
-    if not os.path.exists(".streamlit"):
-        print("Creating .streamlit directory.\n")
-        os.makedirs(".streamlit")
-    os.chdir(".streamlit")
-
-
-# ===================================================================
-
-
 # Helper function to prompt the user for a choice
 def get_choice(question: str, choices: list[str], mapping: list):
     """
@@ -133,7 +121,7 @@ CONFIG = {
 
 
 # Write TOML config to file
-with open("config.toml", "w") as f:
+with open(".streamlit/config.toml", "w") as f:
     toml.dump(CONFIG, f)
 
 print("\n✅ Configuration file '.streamlit/config.toml' created successfully.\n")

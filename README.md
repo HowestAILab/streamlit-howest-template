@@ -3,14 +3,15 @@
 This is a Streamlit project template to quickly develop a Howest-themed app using Python.
 It is perfect for AI projects and building graphical interfaces for existing projects.
 
-## Instructions
+## Devcontainer setup
 
 1. Create a new repository using this GitHub template.
 2. Clone the repository and open it using VSCode.
-3. Press `Ctrl+Shift+P` to open the command palette.
-4. Search for `Dev Containers: Rebuild and Reopen in Container`.
-5. Follow the instructions in the terminal.
-6. An example Streamlit webapp should run automatically, navigate to [http://localhost:8501/](http://localhost:8501/)
+3. Run `python .devcontainer/change_gpu_config.py` to select your GPU mode.
+4. Press `Ctrl+Shift+P` to open the command palette.
+5. Search for `Dev Containers: Rebuild and Reopen in Container`.
+6. Follow the instructions in the terminal.
+7. An example Streamlit webapp should run automatically, navigate to [http://localhost:8501/](http://localhost:8501/)
 
 ## Getting started
 
@@ -24,7 +25,7 @@ There are 4 different Howest color schemes you can choose from:
 To **change the color config**, execute the following command:
 
 ```bash
-python change_config_script.py
+python .streamlit/change_streamlit_config.py
 ```
 
 > [!TIP]
