@@ -6,10 +6,11 @@ This is an up-to-date **Devcontainer** template for developing **Python** projec
 
 1. Create a new repository using this GitHub template.
 2. Clone the repository and open it using VSCode.
-3. Press `Ctrl+Shift+P` to open the command palette.
-4. Search for `Dev Containers: Rebuild and Reopen in Container`.
-5. Follow the instructions in the terminal to install TensorFlow or PyTorch.
-6. You are now ready to start developing with GPU support! 😀
+3. Run `python .devcontainer/change_gpu_config.py` to select your GPU mode.
+4. Press `Ctrl+Shift+P` to open the command palette.
+5. Search for `Dev Containers: Rebuild and Reopen in Container`.
+6. Follow the instructions in the terminal to install TensorFlow or PyTorch.
+7. You are now ready to start developing! 😀
 
 ## Devcontainer info
 
