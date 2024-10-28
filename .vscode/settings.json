@@ -1,0 +1,18 @@
+{
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    },
+    "files.exclude": {
+        "**/.pytest_cache/**": true,
+        "**/__pycache__/**": true,
+        ".ipython/": true,
+        ".mypy_cache/": true
+    },
+    "files.watcherExclude": {
+        "**/.git/**": true,
+        "**/.venv/**": true,
+        "**/node_modules/*/**": true,
+        "**/wandb/**": true
+    }
+}
