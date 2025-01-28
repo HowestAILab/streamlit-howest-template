@@ -48,3 +48,5 @@ streamlit run example.py
 | **❌ Error** | **✅ Solution** |
 | :--- | :--- |
 | Streamlit is not recognized as a command. | Run `poetry install && poetry shell` to make sure your Poetry environment is set up and activated. |
+| Running the `change_streamlit_config.py` script fails. | Run the script from the correct directory (forgot a `cd` command?). |
+| inotify watch limit reached | Streamlit uses a file watcher just like Git does to detect changes. This avoids having to rerun the app after changing the code. If this file watcher limit is reached on your machine, you won't be able to use this feature. Use `streamlit run app.py --server.fileWatcherType none` to run your app without a file watcher. |
