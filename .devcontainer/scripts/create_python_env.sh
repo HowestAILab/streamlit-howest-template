@@ -18,27 +18,28 @@ poetry_add_tensorflow() {
 }
 
 # Function to create environment for PyTorch
-venv_add_pytorch() {
-  echo "⚙️  Creating PyTorch environment..."
-  python -m venv .venv-pt
-  .venv-pt/bin/python -m pip install --upgrade pip --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
-  .venv-pt/bin/python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
-  echo "✅ PyTorch environment setup complete."
-}
+#venv_add_pytorch() {
+#  echo "⚙️  Creating PyTorch environment..."
+#  python -m venv .venv-pt
+#  .venv-pt/bin/python -m pip install --upgrade pip --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
+#  .venv-pt/bin/python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
+#  echo "✅ PyTorch environment setup complete."
+#}
 
 # Function to create environment for TensorFlow
-venv_add_tensorflow() {
-  echo "⚙️  Creating TensorFlow environment..."
-  python -m venv .venv-tf
-  .venv-tf/bin/python -m pip install --upgrade pip --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
-  .venv-tf/bin/python -m pip install tensorflow[and-cuda]==2.17.0 --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
-  echo "✅ TensorFlow environment setup complete."
-}
+#venv_add_tensorflow() {
+#  echo "⚙️  Creating TensorFlow environment..."
+#  python -m venv .venv-tf
+#  .venv-tf/bin/python -m pip install --upgrade pip --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
+#  .venv-tf/bin/python -m pip install tensorflow[and-cuda]==2.17.0 --no-warn-script-location --root-user-action=ignore >> .devcontainer/logs.log
+#  echo "✅ TensorFlow environment setup complete."
+#}
 
 # Allow running of Jupyter Notebook cells with global Python environment
 clear
 echo "⚙️  Instaling dependencies..."
 python -m pip install poetry --no-warn-script-location --root-user-action=ignore  >> .devcontainer/logs.log
+python -m pip install poetry-plugin-shell --no-warn-script-location --root-user-action=ignore  >> .devcontainer/logs.log
 poetry install >> .devcontainer/logs.log
 
 # Ask if the user wants to create a PyTorch environment
