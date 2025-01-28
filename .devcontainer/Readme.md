@@ -1,6 +1,7 @@
 # Devcontainer Template
 
-This is an up-to-date **Devcontainer** template for developing **Python** projects on a **GPU** enabled machine, specifically with **TensorFlow** and **PyTorch** support.
+This is an up-to-date **Devcontainer** template for developing **Python** projects (with Git and Poetry).<br>
+It has optional support for **TensorFlow** and **PyTorch** on **GPU** enabled machines.
 
 ## Instructions
 
@@ -22,20 +23,20 @@ This is an up-to-date **Devcontainer** template for developing **Python** projec
 
 ### Features
 
-| Name        | Version             | Image                                                                                                               |
-| :---------- | :------------------ | :------------------------------------------------------------------------------------------------------------------ |
-| NVIDIA CUDA | CUDA 12.6 & cuDNN 9 | [ghcr.io/devcontainers/features/nvidia-cuda:1](https://github.com/devcontainers/features/tree/main/src/nvidia-cuda) |
-| Python      | 3.12                | [ghcr.io/devcontainers/features/python:1](https://github.com/devcontainers/features/tree/main/src/python)           |
-| Git         | Latest              | [ghcr.io/devcontainers/features/git:1](https://github.com/devcontainers/features/tree/main/src/git)                 |
-| GitHub CLI  | Latest              | [ghcr.io/devcontainers/features/github-cli:1](https://github.com/devcontainers/features/tree/main/src/github-cli)   |
+| Name        | Version             | Image                                                                                                               | Optional |
+| :---------- | :------------------ | :------------------------------------------------------------------------------------------------------------------ | -------- |
+| NVIDIA CUDA | CUDA 12.6 & cuDNN 9 | [ghcr.io/devcontainers/features/nvidia-cuda:1](https://github.com/devcontainers/features/tree/main/src/nvidia-cuda) | Yes      |
+| Python      | 3.12                | [ghcr.io/devcontainers/features/python:1](https://github.com/devcontainers/features/tree/main/src/python)           | No       |
+| Git         | Latest              | [ghcr.io/devcontainers/features/git:1](https://github.com/devcontainers/features/tree/main/src/git)                 | No       |
+| GitHub CLI  | Latest              | [ghcr.io/devcontainers/features/github-cli:1](https://github.com/devcontainers/features/tree/main/src/github-cli)   | No       |
 
 ### Libraries
 
-| Name       | Version | Description                                         |
-| :--------- | :------ | :-------------------------------------------------- |
-| TensorFlow | 2.17.0  | AI development framework                            |
-| PyTorch    | 2.5.0   | AI development framework                            |
-| Poetry     | Latest  | Venv-like solution with great dependency management |
+| Name       | Version | Description                                         | Optional |
+| :--------- | :------ | :-------------------------------------------------- | -------- |
+| TensorFlow | 2.17.0  | AI development framework                            | Yes      |
+| PyTorch    | 2.5.0   | AI development framework                            | Yes      |
+| Poetry     | Latest  | Venv-like solution with great dependency management | No       |
 
 ### Extensions
 
@@ -47,9 +48,12 @@ This is an up-to-date **Devcontainer** template for developing **Python** projec
 | Jupyter  | Jupyter extension pack  | ms-toolsai.jupyter        |
 | Prettier | Code formatter          | esbenp.prettier-vscode    |
 
-## Common errors
+## Possible errors
 
-If the shell scripts fail to run or complain about `\r` characters, check if the `End of Line` formatting of the scripts is set to `LF`.
+| **❌ Error**                                                | **✅ Solution**                                                                |
+| :---------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| Shell scripts fail to run or complain about `\r` characters | Check if the `End of Line` formatting of the scripts is set to `LF` in VSCode. |
+| `poetry shell` fails or is not recognized as a command    | Poetry shell was moved to a plugin (January 2025). Run `pip install poetry-plugin-shell` in the terminal. |
 
 ## Versioning
 
