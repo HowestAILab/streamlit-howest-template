@@ -4,20 +4,20 @@ import streamlit as st
 
 HOWEST_CONTAINER_CSS = \
     f"""{{
-    outline: 2px solid {style.PRIMARY_COLOR};
-    border-radius: 8px;
-    padding: 16px;
+    outline: 1px solid {style.PRIMARY_COLOR};
+    border-radius: 16px;
+    padding: 32px;
     background-color: {style.HEADER_COLOR};
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
 }}"""
 
 HOWEST_CONTAINER_SECONDARY_CSS = \
     f"""{{
     outline: 1px solid {style.BORDER_COLOR};
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: 16px;
+    padding: 16px 32px 32px 32px;
     background-color: {style.HEADER_COLOR};
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
 }}"""
 
 HOWEST_FOOTER_CSS = \
